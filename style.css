@@ -1,18 +1,12 @@
-/*Style everything:
-- Set fonts, spacing, colors
-- Make book cards have shadows, padding, and rounded corners
-- Use flexbox to arrange books in a responsive grid*/
-
 
 body { font-family: Arial, sans-serif; 
     margin: 0; 
     padding: 0; 
-    background: #f4f4f4; 
-}
+    background-color: #f3bfea;}
 
 header { 
-    background: #d79a39; 
-    color: rgb(19, 19, 16); 
+    background: #8806a9; 
+    color: rgb(9, 9, 9); 
     padding: 1rem; 
     text-align: center; 
 }
@@ -21,7 +15,7 @@ main {
     padding: 2rem; 
 }
 
-.search-section, .recommended, .wishlist, .review-section { 
+.search-section, .recommended, .wishlist, .review-section, .contact-section { 
     margin-bottom: 2rem; 
 }
 
@@ -37,13 +31,24 @@ input, select, button, textarea {
 }
 
 .book-card { 
-    background: rgb(233, 166, 89); 
+    background: rgb(201, 79, 203); 
     padding: 1rem; 
     border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    box-shadow: 0 2px 5px rgba(243, 8, 8, 0.1); 
     width: 200px; 
 }
 
 .book-card h4 { 
     margin: 0 0 0.5rem 0; 
+}
+
+.contact-section {
+    background-color: rgb(201, 79, 203);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(244, 5, 5, 0.1);
+}
+
+h2{
+    color: #000200;
 }

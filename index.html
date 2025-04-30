@@ -1,62 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js"></script>>
-    <link rel="stylesheet" href="style.css">
-
+    <script src="app.js"></script> <!-- Connect JS logic -->
+    <link rel="stylesheet" href="style.css"> <!-- Connect CSS styling -->
     <title>BookApp</title>
 </head>
 <body>
     <header>
-        <h1>Find Your Next Read</h1>
-      </header>
-      <main>
-        <!--Dropdown to choose genre
-        Dropdown to choose language
-        Button to search
-        Area to display search results-->
-
+        <h1>Bookworms' Heaven</h1> <!-- Site title -->
+    </header>
+    <main>
+        <!-- Book search section -->
         <section class="search-section">
-          <h2>Search Books by Genre</h2>
-          <select id="genre-select">
-            <option value="fantasy">Fantasy</option>
-            <option value="sci-fi">Sci-Fi</option>
-            <option value="romance">Romance</option>
-            <option value="mystery">Mystery</option>
-            <option value="non-fiction">Non-Fiction</option>
-            <option value="historical">Historical</option>
-            <option value="horror">Horror</option>
-            <option value="thriller">Thriller</option>
-          </select>
-          <select id="language-select">
-            <option value="any">Any Language</option>
-            <option value="english">English</option>
-            <option value="spanish">Spanish</option>
-            <option value="french">French</option>
-          </select>
-          <button onclick="searchBooks()">Search</button>
-          <div class="book-list" id="search-results"></div>
+            <h2>Find Your Next Read</h2>
+            <!-- Dropdown for genre selection -->
+            <select id="genre-select">
+                <option value="fantasy">Fantasy</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="romance">Romance</option>
+                <option value="mystery">Mystery</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="historical">Historical</option>
+                <option value="horror">Horror</option>
+                <option value="thriller">Thriller</option>
+            </select>
+            <!-- Dropdown for language -->
+            <select id="language-select">
+                <option value="any">Any Language</option>
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+            </select>
+            <!-- Dropdown for author -->
+            <select id="author-name">
+                <option value="any">Any Author</option>
+                <option value="j r r tolkien">J R R Tolkien</option>
+                <option value="j k rowling">J K Rowling</option>
+                <option value="patrick rothfuss">Patrick Rothfuss</option>
+                <option value="franck herbert">Franck Herbert</option>
+            </select>
+            <!-- Text input for publication year -->
+            <input type="text" id="year-input" placeholder="Year of Publication">
+            <!-- Button to trigger search -->
+            <button onclick="searchBooks()">Search</button>
+            <!-- Display area for search results -->
+            <div class="book-list" id="search-results"></div>
         </section>
-        <!--A section that shows books recommended based on user preferences (wishlist)-->
+
+        <!-- Section showing recommended books -->
         <section class="recommended">
-          <h2>Recommended Books</h2>
-          <div class="book-list" id="recommended-books"></div>
+            <h2>Recommended Books</h2>
+            <div class="book-list" id="recommended-books"></div>
         </section>
-    
+
+        <!-- Section showing user's wishlist -->
         <section class="wishlist">
-          <h2>Reading Wish List</h2>
-          <div class="book-list" id="wishlist"></div>
+            <h2>Reading Wish List</h2>
+            <div class="book-list" id="wishlist"></div>
         </section>
-    
+
+        <!-- Section for submitting reviews -->
         <section class="review-section">
-          <h2>Leave a Review</h2>
-          <input type="text" id="review-book" placeholder="Book Title" /><br />
-          <textarea id="review-text" placeholder="Write your review here..."></textarea><br />
-          <button onclick="submitReview()">Submit Review</button>
-          <div id="reviews"></div>
+            <h2>Leave a Review</h2>
+            <input type="text" id="review-book" placeholder="Book Title" /><br />
+            <textarea id="review-text" placeholder="Write your review here..."></textarea><br />
+            <button onclick="submitReview()">Submit Review</button>
+            <div id="reviews"></div>
         </section>
-      </main>
-    
-      
+
+        <!-- Contact form section -->
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                <input type="text" placeholder="Your Name" required><br>
+                <input type="email" placeholder="Your Email" required><br>
+                <textarea placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
